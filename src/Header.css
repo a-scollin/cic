@@ -1,0 +1,37 @@
+.navheader {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.headerbox {
+    border-radius: 10px;
+    padding: 0 5px;
+    border: 2px solid rgba(119, 119, 119, 0.719);
+}
+
+.headerlink-title {
+    color: black;
+    text-decoration: none;
+    font-size: larger;
+    padding: 0 20px;
+}
+
+.headerlink-dot {
+    margin-top: -0.5rem;
+    opacity: 0;
+    transition: opacity 200ms linear;
+}
+
+.headerlink-title:hover .headerlink-dot {
+    opacity: 1;
+}
+
+.headerlink-dot-active {
+    margin-top: -0.5rem;
+    display: block;
+}
+
+.headerlink-no-link {
+    pointer-events: none;
+}
