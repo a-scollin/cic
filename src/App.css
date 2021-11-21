@@ -55,6 +55,7 @@ h5 {
 .card {
     background: #fff;
     width: 16em;
+    height: 20em;
     border-radius: 0.6em;
     margin: 1em;
     overflow: hidden;
