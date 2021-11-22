@@ -7,8 +7,8 @@ import Header from './Header';
 const Home = () => (
   <div>
     <h2>Welcome to <h1>Cryptography in the classroom!</h1></h2>
-    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+    <div>
+This is an introduction to Cryptography aimed at the early secondary school level (S1-S2). It consists of three mini-lessons that all be completed in under an hour each of which involve a supplementary video that is also self contained. Check the Teacher tab above for all the materials needed to teach these lessons and see below for the videos.
     </div>
     <div className='cards'>
          <Card
@@ -53,23 +53,35 @@ const Teachers = () => (
   <div>
     <h1>Materials for teachers</h1>
     <ul>
-    <h2>Section 1 : Security</h2>
+    <h5>Section 1 : Security</h5>
     <br/>
-      <li>Link to the activity sheet</li>
-      <li>Link to the lesson plan</li>
-      <li>Link to the Video</li>
+      <li>
+      <a href="./docs/CiC_Security_Lesson_Plan.pdf">
+  Lesson Plan
+</a></li>
+      <li>Video</li>
       <br/>
-      <h2>Section 2 : Private Keys</h2>
+      <h5>Section 2 : Private Keys</h5>
       <br/>
-      <li>Link to the lesson plan</li>
-      <li>Link to the lesson plan</li>
-      <li>Link to the Video</li>
+      <li>
+      <a href="./docs/CiC_Private_Lesson_Plan.pdf">
+  Lesson Plan
+</a></li>
+      <li><a href="./docs/CiC_Private_Activity_Sheet.pdf">
+  Activity Handout
+</a></li>
+      <li>Video</li>
       <br/>
-      <h2>Section 3 : Public Keys</h2>
+      <h5>Section 3 : Public Keys</h5>
       <br/>
-      <li>Link to the lesson plan</li>
-      <li>Link to the lesson plan</li>
-      <li>Link to the Video</li>
+      <li>
+      <a href="./docs/CiC_Public_Lesson_Plan.pdf">
+  Lesson Plan
+</a></li>
+      <li> <a href="./docs/CiC_Public_Activity_Sheet.pdf">
+  Activity Handout
+</a></li>
+      <li>Video</li>
     </ul>
   </div>
 );
