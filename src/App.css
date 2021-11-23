@@ -22,9 +22,14 @@ body {
 
 h1,
 h2,
-h3,
-h5 {
+h3 {
     margin: 0;
+}
+
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    margin-bottom: 0.2em;
 }
 
 .header {

@@ -52,37 +52,40 @@ class Card extends React.Component {
 const Teachers = () => (
   <div>
     <h1>Materials for teachers</h1>
-    <ul>
     <h5>Section 1 : Security</h5>
-    <br/>
-      <li>
       <a href="./docs/CiC_Security_Lesson_Plan.pdf">
   Lesson Plan
-</a></li>
-      <li>Video</li>
+</a><br/>
+<a href="https://youtu.be/jju3qDfPZlI">
+Video</a>
       <br/>
       <h5>Section 2 : Private Keys</h5>
-      <br/>
-      <li>
+  
+      
       <a href="./docs/CiC_Private_Lesson_Plan.pdf">
   Lesson Plan
-</a></li>
-      <li><a href="./docs/CiC_Private_Activity_Sheet.pdf">
+</a>
+<br/>
+      <a href="./docs/CiC_Private_Activity_Sheet.pdf">
   Activity Handout
-</a></li>
-      <li>Video</li>
+</a>
+<br/>
+<a href="https://youtu.be/S_ehmaIZzDA">
+Video</a>
       <br/>
       <h5>Section 3 : Public Keys</h5>
-      <br/>
-      <li>
+
+      
       <a href="./docs/CiC_Public_Lesson_Plan.pdf">
   Lesson Plan
-</a></li>
-      <li> <a href="./docs/CiC_Public_Activity_Sheet.pdf">
+</a>
+<br/>
+       <a href="./docs/CiC_Public_Activity_Sheet.pdf">
   Activity Handout
-</a></li>
-      <li>Video</li>
-    </ul>
+</a>
+<br/>
+<a href="https://youtu.be/bzCc8ywowbAI?cc_load_policy=1">
+Video</a>
   </div>
 );
 
@@ -97,21 +100,21 @@ const Contact = () => (
 const Security = () => (
   <div>
     <h2>Security</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/cWCg9f-eAH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jju3qDfPZlI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+    </div>
 );
 
 const Priv = () => (
   <div>
     <h2>Private Keys</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/cWCg9f-eAH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/S_ehmaIZzDA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 );
 
 const Pke = () => (
   <div>
     <h2>Public Keys & Anonymity</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/cWCg9f-eAH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/bzCc8ywowbA?cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 );
 
