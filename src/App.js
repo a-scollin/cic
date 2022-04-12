@@ -1,14 +1,18 @@
 import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Header from './Header';
+import Cryptle from './cryptple';
+import { createContext } from 'react/cjs/react.production.min';
+
+
 
 
 const Home = () => (
   <div>
     <h2>Welcome to <h1>Cryptography in the classroom!</h1></h2>
     <div>
-This is an introduction to Cryptography aimed at the early secondary school level (S1-S2). It consists of three mini-lessons that all be completed in under an hour each of which involve a supplementary video that is also self contained. Check the Teacher tab above for all the materials needed to teach these lessons and see below for the videos.
+This is an introduction to Cryptography and security aimed at the early secondary school level (S1-S2). It consists of three mini-lessons that can be completed in under an hour in total. Each mini-lesson involves a supplementary video that is also self contained - see below. Check the Teacher tab above for all the materials needed to teach these lessons and see below for the videos.
     </div>
     <div className='cards'>
          <Card
@@ -53,38 +57,38 @@ const Teachers = () => (
   <div>
     <h1>Materials for teachers</h1>
     <h5>Section 1 : Security</h5>
-      <a href="./docs/CiC_Security_Lesson_Plan.pdf">
+      <a href="https://uoe-my.sharepoint.com/:b:/g/personal/s1842899_ed_ac_uk/EdTryzyNLr9Hmawmur8-iPUBQ3axL2yY6okkFK7rfeGh6w?e=zGk0OX">
   Lesson Plan
 </a><br/>
-<a href="https://youtu.be/jju3qDfPZlI">
+<a href="https://media.ed.ac.uk/media/CiC+-+Security/1_cu7jdepp">
 Video</a>
       <br/>
       <h5>Section 2 : Private Keys</h5>
   
       
-      <a href="./docs/CiC_Private_Lesson_Plan.pdf">
+      <a href="https://uoe-my.sharepoint.com/:b:/g/personal/s1842899_ed_ac_uk/EXqwiVu3efNOnn44oibUJvgBp-lnbNZMZvb6VksZ31enMQ?e=mUA0Ha">
   Lesson Plan
 </a>
 <br/>
-      <a href="./docs/CiC_Private_Activity_Sheet.pdf">
+      <a href="https://uoe-my.sharepoint.com/:b:/g/personal/s1842899_ed_ac_uk/EaSOR2I1V9lLneULnRkNxmoBxVZGJMCt_MBqm6O9W6a8iQ?e=2CGt1r">
   Activity Handout
 </a>
 <br/>
-<a href="https://youtu.be/S_ehmaIZzDA">
+<a href="https://media.ed.ac.uk/media/CiC+-+Private/1_zr48d28m">
 Video</a>
       <br/>
-      <h5>Section 3 : Public Keys</h5>
+      <h5>Section 3 : Public Keys and Anonymity</h5>
 
       
-      <a href="./docs/CiC_Public_Lesson_Plan.pdf">
+      <a href="https://uoe-my.sharepoint.com/:b:/g/personal/s1842899_ed_ac_uk/EUL1lwVXTA9GpJSFIEpXl78B4ET5mIPdCJMoqwzKji01zw?e=cm3z9I">
   Lesson Plan
 </a>
 <br/>
-       <a href="./docs/CiC_Public_Activity_Sheet.pdf">
+       <a href="https://uoe-my.sharepoint.com/:b:/g/personal/s1842899_ed_ac_uk/EYVq76gBEa1LuGbWpZ75VW8BxCa3ge_gqA-gxpm2HR5Z_Q?e=9x1tSL">
   Activity Handout
 </a>
 <br/>
-<a href="https://youtu.be/bzCc8ywowbAI?cc_load_policy=1">
+<a href="https://media.ed.ac.uk/media/CiC+-+Public/1_p9fn0myn">
 Video</a>
   </div>
 );
@@ -100,46 +104,47 @@ const Contact = () => (
 const Security = () => (
   <div>
     <h2>Security</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/jju3qDfPZlI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+    <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2010292/sp/201029200/embedIframeJs/uiconf_id/32599141/partner_id/2010292?iframeembed=true&playerId=kaltura_player&entry_id=1_cu7jdepp&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[forceMobileHTML5]=true&amp;flashvars[scrubber.sliderPreview]=false&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_2902g8j4" width="1000" height="600" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe>
     </div>
 );
 
 const Priv = () => (
   <div>
     <h2>Private Keys</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/S_ehmaIZzDA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2010292/sp/201029200/embedIframeJs/uiconf_id/32599141/partner_id/2010292?iframeembed=true&playerId=kaltura_player&entry_id=1_zr48d28m&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[forceMobileHTML5]=true&amp;flashvars[scrubber.sliderPreview]=false&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_exetqr78" width="1000" height="600" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe>
+  <Cryptle/>
   </div>
 );
 
 const Pke = () => (
   <div>
     <h2>Public Keys & Anonymity</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/bzCc8ywowbA?cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2010292/sp/201029200/embedIframeJs/uiconf_id/32599141/partner_id/2010292?iframeembed=true&playerId=kaltura_player&entry_id=1_p9fn0myn&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[forceMobileHTML5]=true&amp;flashvars[scrubber.sliderPreview]=false&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_ato1xz2q" width="1000" height="600" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe>
   </div>
 );
 
 
 
-function App() {
-  return (
+class App extends React.Component {
+  render() {
+
+    return (
     <div className='App'>
       <Router>
         <Route path='/:page' component={Header} />
         <Route exact path='/' component={Header} />
-        <Route exact path='/' component={Home} />
+        <Route exact path='/' component={Cryptle} />
         <Route exact path='/teachers' component={Teachers} />
         <Route exact path='/contact' component={Contact} />
         <Route path='/home' component={Home} />
         <Route exact path='/home/security' component={Security} />
         <Route exact path='/home/private-keys' component={Priv} />
         <Route exact path='/home/public-keys' component={Pke} />
-        <Redirect to="/home" />
       </Router>
-      
-        </div>
-
+      </div>
     
   );
+}
 }
 
 export default App;
