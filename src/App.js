@@ -12,7 +12,7 @@ const Home = () => (
   <div>
     <h2>Welcome to <h1>Cryptography in the classroom!</h1></h2>
     <div>
-This is an introduction to Cryptography and security aimed at the early secondary school level (S1-S2). It consists of three mini-lessons that can be completed in under an hour in total. Each mini-lesson involves a supplementary video that is also self contained - see below. Check the Teacher tab above for all the materials needed to teach these lessons and see below for the videos.
+This is an introduction to Cryptography aimed at the early secondary school level (S1-S2). It consists of three mini-lessons that can each be completed in under an hour. Each mini-lesson involves a supplementary video that is also self contained - see below. Check the Teacher tab above for all the materials needed to teach these lessons and see below for the videos and Cryptle game!
     </div>
     <div className='cards'>
          <Card
@@ -57,39 +57,47 @@ const Teachers = () => (
   <div>
     <h1>Materials for teachers</h1>
     <h5>Section 1 : Security</h5>
-      <a href="https://uoe-my.sharepoint.com/:b:/g/personal/s1842899_ed_ac_uk/EdTryzyNLr9Hmawmur8-iPUBQ3axL2yY6okkFK7rfeGh6w?e=zGk0OX">
+      <a href="https://uoe-my.sharepoint.com/:b:/g/personal/s1842899_ed_ac_uk/EUmjytf4HFBPjy23PYtVOOwByUlTZx2b4UOhQte-ZXBavw?e=yZTUMy">
   Lesson Plan
 </a><br/>
-<a href="https://media.ed.ac.uk/media/CiC+-+Security/1_cu7jdepp">
-Video</a>
-      <br/>
+<Link to={"/home/security"} style={{textDecoration: 'underline'}}>
+    <div>Video</div>
+</Link>
       <h5>Section 2 : Private Keys</h5>
   
       
-      <a href="https://uoe-my.sharepoint.com/:b:/g/personal/s1842899_ed_ac_uk/EXqwiVu3efNOnn44oibUJvgBp-lnbNZMZvb6VksZ31enMQ?e=mUA0Ha">
+      <a href="https://uoe-my.sharepoint.com/:b:/g/personal/s1842899_ed_ac_uk/ETQUk-TdlXZNq7DfCFZ3wBEBDLWJam8mYEMrjWfC8oC15w?e=ar2sOd">
   Lesson Plan
 </a>
 <br/>
-      <a href="https://uoe-my.sharepoint.com/:b:/g/personal/s1842899_ed_ac_uk/EaSOR2I1V9lLneULnRkNxmoBxVZGJMCt_MBqm6O9W6a8iQ?e=2CGt1r">
+      <a href="https://uoe-my.sharepoint.com/:b:/g/personal/s1842899_ed_ac_uk/EZ9XzWad8dlKo88TO4J7v80BH7g828yCAKC-cHvpXNEpWA?e=AotDds">
   Activity Handout
 </a>
 <br/>
-<a href="https://media.ed.ac.uk/media/CiC+-+Private/1_zr48d28m">
-Video</a>
-      <br/>
+<Link to={"/home/private-keys"} style={{textDecoration: 'underline'}}>
+    <div>Video</div>
+</Link>
+<Link to={"/home/private-keys"} style={{textDecoration: 'underline'}}>
+    <div>Play Cryptle with random words (Scroll to bottom of page)</div>
+</Link>
+<Link to={"/home/private-keys/custom"} style={{textDecoration: 'underline'}}>
+    <div>Play Cryptle with a custom word (Scroll to bottom of page)</div>
+</Link>     
+    <br/>
       <h5>Section 3 : Public Keys and Anonymity</h5>
 
       
-      <a href="https://uoe-my.sharepoint.com/:b:/g/personal/s1842899_ed_ac_uk/EUL1lwVXTA9GpJSFIEpXl78B4ET5mIPdCJMoqwzKji01zw?e=cm3z9I">
+      <a href="https://uoe-my.sharepoint.com/:b:/g/personal/s1842899_ed_ac_uk/EVdyx1Mwd9xGjsm61lUtpmcBRkY71jfcvg3NGR1jqbYGYw?e=WfDMMM">
   Lesson Plan
 </a>
 <br/>
-       <a href="https://uoe-my.sharepoint.com/:b:/g/personal/s1842899_ed_ac_uk/EYVq76gBEa1LuGbWpZ75VW8BxCa3ge_gqA-gxpm2HR5Z_Q?e=9x1tSL">
+       <a href="https://uoe-my.sharepoint.com/:b:/g/personal/s1842899_ed_ac_uk/ES1KAQ93iG5Iq7i9Pxd3yDcBae9iFPYDhzoLYse9J9vv9Q?e=1AWngi">
   Activity Handout
 </a>
 <br/>
-<a href="https://media.ed.ac.uk/media/CiC+-+Public/1_p9fn0myn">
-Video</a>
+<Link to={"/home/public-keys"} style={{textDecoration: 'underline'}}>
+    <div>Video</div>
+</Link>
   </div>
 );
 
@@ -104,41 +112,47 @@ const Contact = () => (
 const Security = () => (
   <div>
     <h2>Security</h2>
-    <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2010292/sp/201029200/embedIframeJs/uiconf_id/32599141/partner_id/2010292?iframeembed=true&playerId=kaltura_player&entry_id=1_cu7jdepp&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[forceMobileHTML5]=true&amp;flashvars[scrubber.sliderPreview]=false&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_2902g8j4" width="1000" height="600" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe>
-    </div>
+    <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2010292/sp/201029200/embedIframeJs/uiconf_id/32599141/partner_id/2010292?iframeembed=true&playerId=kaltura_player&entry_id=1_66sp8rs5&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[forceMobileHTML5]=true&amp;flashvars[scrubber.sliderPreview]=false&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_nhi64u4q" width="1000" height="600" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe>    </div>
 );
 
-const Priv = () => (
+const Priv = (props) => (
   <div>
     <h2>Private Keys</h2>
     <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2010292/sp/201029200/embedIframeJs/uiconf_id/32599141/partner_id/2010292?iframeembed=true&playerId=kaltura_player&entry_id=1_zr48d28m&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[forceMobileHTML5]=true&amp;flashvars[scrubber.sliderPreview]=false&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_exetqr78" width="1000" height="600" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe>
-  <Cryptle/>
+
+<div>    <Link to={props.preset ? "/home/private-keys" : "/home/private-keys/custom" } style={{    textDecoration: 'none'
+    }}>
+      <div>{props.preset ? "Use random words!" : "Use a custom word!"}</div>
+    </Link></div>
+    
+    <Cryptle {...props}/>
+
   </div>
 );
 
 const Pke = () => (
   <div>
     <h2>Public Keys & Anonymity</h2>
-    <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2010292/sp/201029200/embedIframeJs/uiconf_id/32599141/partner_id/2010292?iframeembed=true&playerId=kaltura_player&entry_id=1_p9fn0myn&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[forceMobileHTML5]=true&amp;flashvars[scrubber.sliderPreview]=false&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_ato1xz2q" width="1000" height="600" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe>
-  </div>
+    <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2010292/sp/201029200/embedIframeJs/uiconf_id/32599141/partner_id/2010292?iframeembed=true&playerId=kaltura_player&entry_id=1_zked89ey&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[forceMobileHTML5]=true&amp;flashvars[scrubber.sliderPreview]=false&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_kktbki7r" width="1000" height="600" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe>  </div>
 );
 
 
 
 class App extends React.Component {
   render() {
-
     return (
     <div className='App'>
       <Router>
         <Route path='/:page' component={Header} />
-        <Route exact path='/' component={Header} />
-        <Route exact path='/' component={Cryptle} />
+        <Route exact path="/">
+        <Redirect to="/home" />
+        </Route>        
         <Route exact path='/teachers' component={Teachers} />
-        <Route exact path='/contact' component={Contact} />
+        <Route exact path='/contact' component={Contact}/>
         <Route path='/home' component={Home} />
         <Route exact path='/home/security' component={Security} />
-        <Route exact path='/home/private-keys' component={Priv} />
+        <Route exact path='/home/private-keys'  render={() => <Priv preset={false}/>} />
+        <Route exact path='/home/private-keys/custom' render={() => <Priv preset={true}/>} />
         <Route exact path='/home/public-keys' component={Pke} />
       </Router>
       </div>

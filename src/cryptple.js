@@ -29,6 +29,10 @@ function Cryptle(props) {
   
   var n = Math.floor(Math.random() * 26);
 
+  if(n == 0){
+    n = 1 
+  }
+
   for (let i = 0; i < alph.length; i++){
     let offset = (i + n) % alph.length;
     newalpha[String.fromCharCode(65 + i)] = alph[offset];
@@ -41,7 +45,15 @@ function Cryptle(props) {
   useEffect(() => {
     generateWordSet().then((words) => {
       setWordSet(words.wordSet);
-      setCorrectWord(words.todaysWord);
+      if(props.preset){
+        var word = window.prompt("Please enter a five letter word:","CODES")
+        if (word == null || word.length != 5){
+          word = "codes"
+        }
+      }else{
+        var word = words.todaysWord
+      }
+      setCorrectWord(word.toLowerCase());
     });
   }, []);
 
@@ -52,17 +64,18 @@ function Cryptle(props) {
     for (let i = 0; i < 5; i++) {
       currWord += board[currAttempt.attempt][i];
     }
-    if (wordSet.has(currWord.toLowerCase())) {
-      setCurrAttempt({ attempt: currAttempt.attempt + 1, letter: 0 });
-    } else {
+    if (!wordSet.has(currWord.toLowerCase()) && !props.preset) {
       alert("Word not found");
       return;
     }
-
-    if (currWord === correctWord) {
+    
+    setCurrAttempt({ attempt: currAttempt.attempt + 1, letter: 0 });
+   
+    if (currWord.toLowerCase() === correctWord) {
       setGameOver({ gameOver: true, guessedWord: true });
       return;
     }
+
     console.log(currAttempt);
     if (currAttempt.attempt === 5) {
       setGameOver({ gameOver: true, guessedWord: false });

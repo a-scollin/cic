@@ -56,21 +56,21 @@ function Keyboard() {
   return (
     <div className="keyboard" onKeyDown={handleKeyboard}>
       <div className="line1">
-        {/* {keys1.map((key) => {
+        {keys1.map((key) => {
           return <Key keyVal={key} disabled={disabledLetters.includes(key)} />;
-        })} */}
+        })}
       </div>
       <div className="line2">
-        {/* {keys2.map((key) => {
+        {keys2.map((key) => {
           return <Key keyVal={key} disabled={disabledLetters.includes(key)} />;
-        })} */}
+        })}
       </div>
       <div className="line3">
       <Key keyVal={"DELETE"} bigKey />
 
-        {/* {keys3.map((key) => {
+        {keys3.map((key) => {
           return <Key keyVal={key} disabled={disabledLetters.includes(key)} />;
-        })} */}
+        })}
         <Key keyVal={"RESTART"} bigKey />
       </div>
     </div>
