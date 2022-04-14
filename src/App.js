@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
+import { HashRouter as Router, Route, Link, Redirect } from 'react-router-dom';
 import React, {useState} from 'react';
 import './App.css';
 import Header from './Header';
@@ -80,7 +80,7 @@ const Teachers = () => (
 <Link to={"/cic/home/private-keys"} style={{textDecoration: 'underline'}}>
     <div>Play Cryptle with random words (Scroll to bottom of page)</div>
 </Link>
-<Link to={"/home/private-keys/custom"} style={{textDecoration: 'underline'}}>
+<Link to={"/cic/home/private-keys/custom"} style={{textDecoration: 'underline'}}>
     <div>Play Cryptle with a custom word (Scroll to bottom of page)</div>
 </Link>     
     <br/>
