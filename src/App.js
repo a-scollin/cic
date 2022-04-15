@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
 import React, {useState} from 'react';
 import './App.css';
 import Header from './Header';
@@ -143,17 +143,19 @@ class App extends React.Component {
     return (
     <div className='App'>
       <Router>
-        <Route path='/cic/:page' component={Header} />
-        <Route exact path="/cic">
-        <Redirect to="/cic/home" />
-        </Route>        
-        <Route exact path='/cic/teachers' component={Teachers} />
-        <Route exact path='/cic/contact' component={Contact}/>
-        <Route path='/cic/home' component={Home} />
-        <Route exact path='/cic/home/security' component={Security} />
-        <Route exact path='/cic/home/private-keys'  render={() => <Priv preset={false}/>} />
-        <Route exact path='/cic/home/private-keys/custom' render={() => <Priv preset={true}/>} />
-        <Route exact path='/cic/home/public-keys' component={Pke} />
+        <Switch>
+          <Route path='/cic/:page' component={Header} />
+          <Route exact path="/cic">
+          <Redirect to="/cic/home" />
+          </Route>        
+          <Route exact path='/cic/teachers' component={Teachers} />
+          <Route exact path='/cic/contact' component={Contact}/>
+          <Route path='/cic/home' component={Home} />
+          <Route exact path='/cic/home/security' component={Security} />
+          <Route exact path='/cic/home/private-keys'  render={() => <Priv preset={false}/>} />
+          <Route exact path='/cic/home/private-keys/custom' render={() => <Priv preset={true}/>} />
+          <Route exact path='/cic/home/public-keys' component={Pke} />
+        </Switch>
       </Router>
       </div>
     
